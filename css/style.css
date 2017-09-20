@@ -1,0 +1,176 @@
+
+/****************************************** Different Containers *************************/
+
+/* container which holds all the elements. outer most container */
+body {
+	background-color : #AFA4A2;
+}
+.outsideContainer {
+	width : 35vw;
+	height : 30vw;
+	position : absolute;
+	margin : auto;
+	top : 0;
+	right : 0;
+	bottom : 0;
+	left : 0;
+	background-color : #eee;
+	overflow : scroll;
+	font-family : verdana;
+	border : 2px solid #000;
+	display : flex;
+}
+
+/* to limit the width of all elements to 90% */
+.insideContainer {
+	width : 90%;
+	height : auto;
+	margin-left : 5%;
+	margin-right : 5%;
+	position : absolute;
+}
+
+/* container to hold header */
+.headerContainer {
+	width : 100%;
+	height : auto;
+	border-bottom : 2px solid black;
+	margin-bottom : 0;
+}
+
+/* input box for entering new TODO item name*/
+.inputContainer {
+	width : 100%;
+	height : 2vw;
+	border : 2px solid black;
+	margin-top : 1vw;
+}
+
+/* specifying ul to not include any default list style */
+.outsideContainer .insideContainer ul {
+	margin-top : 2vw;
+	list-style-type : none;
+	position : absolute;
+}
+
+/* container for holding the list items */
+.itemContainer {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	height : auto;	
+}
+
+/************************************* All containers are finished ***************************/
+
+/************************************* Applying different effects to the elements ************/
+
+/* to create a strike through effect on checkbox label */
+.strikeItOut {
+	text-decoration : line-through;
+	color : #ccc;
+}
+
+/* to move delete button to right side */
+.moveRightSide {
+	float : right;
+}
+
+.outsideContainer .insideContainer li a {
+	font-size : 1vw;
+}
+
+.visibilityNone {
+	opacity : 0;
+}
+
+.customHorizontalRule{
+	border-bottom : 2px solid black;
+	margin-top : 1vw;
+	padding : 2vw;
+	
+}
+
+.clearScreenButton {
+	float : right;
+}
+
+.mobileVisibility {
+	opacity : 1;
+}
+
+/********************************* Done with all the effects needed ****************************/
+
+/********************************* Media queries ***********************************************/
+
+@media screen and (min-width : 1000px){
+	.customHorizontalRule:hover .visibilityNone {
+		opacity : 1;
+	}
+	.mobileDialog {
+		display : none;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.outsideContainer {
+	width : 60vw;
+	height : 70vh;
+	}
+	.outsideContainer .insideContainer li a {
+	font-size : 1.5vw;
+	}
+	.mobileDialog {
+	color : #eee;
+	font-size : 2vw;
+	font-style : italic;
+	font-weight : bold;
+	text-align : center;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.outsideContainer {
+	width : 80vw;
+	height : 70vh;
+	}
+	.outsideContainer .insideContainer li a {
+	font-size : 2vw;
+	}
+	.customHorizontalRule {
+	border-bottom : 2px solid black;
+	margin-top : 5vw;
+	margin-bottom : 5vw;
+	}
+	.inputContainer {
+	width : 100%;
+	height : 5vw;
+	border : 2px solid black;
+	margin-top : 1vw;
+	}
+	.mobileDialog {
+		font-size : 4vw;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.outsideContainer {
+	width : 95vw;
+	height : 75vh;
+	}
+	.outsideContainer .insideContainer li a {
+	font-size : 3vw;
+	}
+	.customHorizontalRule {
+	border-bottom : 2px solid black;
+	margin-top : 10vw;
+	margin-bottom : 5vw;
+	}
+	.inputContainer {
+	width : 100%;
+	height : 10vw;
+	border : 2px solid black;
+	margin-top : 1vw;
+	}
+}
+/************************************************ End of media query ***************************/
